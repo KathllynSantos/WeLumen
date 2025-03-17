@@ -1,0 +1,115 @@
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background: #aeaeae !important; /* Garante que o fundo não fique transparente */
+    }
+
+    .logo img {
+        height: 50px;
+        padding: 0 20px;
+    }
+
+    /* Esconder menu padrão e criar menu hamburguer */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: #aeaeae; /* Mantém fundo visível */
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 15px 0;
+    }
+
+    .menu a {
+        color: black !important; /* Força a cor do texto para preto */
+        text-decoration: none; /* Remove sublinhado dos links */
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    /* Ícone do menu hamburguer */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        padding-right: 20px;
+    }
+    .overlay-text {
+        font-size: 1.4rem;
+        width: 90%;
+        bottom: 10%;
+    }
+
+    .prev, .next {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+    .carousel-container {
+        height: 350px;
+    }
+    .sobre-nos {
+        padding: 30px 5%;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .letreiro-case {
+        height: 100px;
+    }
+
+    .letreiro-case .texto-background {
+        font-size: 10vw;
+    }
+}
+
+
+/* Para telas muito pequenas */
+@media screen and (max-width: 480px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+    .overlay-text {
+        font-size: 1.2rem;
+        padding: 10px;
+        bottom: 8%;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+    .overlay-text {
+        font-size: 1.2rem;
+    }
+
+    .sobre-nos {
+        padding: 20px 5%;
+    }
+
+    .portfolio h2 {
+        font-size: 1.8rem;
+    }
+
+    .letreiro-case {
+        height: 80px;
+    }
+
+    .letreiro-case .texto-background {
+        font-size: 8vw;
+    }   
+}
