@@ -19,27 +19,50 @@ document.addEventListener("DOMContentLoaded", () => {
     function prevSlide() {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
         showSlide(currentIndex);
-        resetInterval(); // Reinicia o intervalo após a interação
+        resetInterval();
     }
 
     function nextSlide() {
         currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
         showSlide(currentIndex);
-        resetInterval(); // Reinicia o intervalo após a interação
+        resetInterval();
     }
 
     function startInterval() {
-        slideInterval = setInterval(nextSlide, 3000);
+        slideInterval = setInterval(nextSlide, 4000);
     }
 
     function resetInterval() {
-        clearInterval(slideInterval); // Limpa o intervalo existente
-        startInterval(); // Inicia um novo intervalo
+        clearInterval(slideInterval);
+        startInterval();
     }
 
-    startInterval(); // Inicia o intervalo automaticamente
+    startInterval();
 
-    // Atribui as funções aos botões
     document.querySelector(".prev").addEventListener("click", prevSlide);
     document.querySelector(".next").addEventListener("click", nextSlide);
+
+    // 👉 Swipe para celular/tablet
+    const carouselContainer = document.querySelector('.carousel-container');
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carouselContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleGesture();
+    });
+
+    function handleGesture() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+            nextSlide();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+            prevSlide();
+        }
+    }
 });
