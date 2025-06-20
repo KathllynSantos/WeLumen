@@ -1,25 +1,28 @@
 function mostrarDepoimento(cliente) {
+    // Remover a classe "selecionado" de todos os clientes
     const clientes = document.querySelectorAll('.cliente');
-    clientes.forEach(c => c.classList.remove('selecionado'));
+    clientes.forEach(cliente => cliente.classList.remove('selecionado'));
 
-    const clienteSelecionado = document.querySelector(`.cliente[onclick*="${cliente}"]`);
+    // Adicionar a classe "selecionado" ao cliente clicado
+    const clienteSelecionado = document.querySelector(`.cliente[onclick="mostrarDepoimento('${cliente}')"]`);
     clienteSelecionado.classList.add('selecionado');
 
+    // Mostrar o depoimento correspondente
     const depoimentos = {
         cliente1: {
-            nome: 'Jessica Mesquita',
-            foto: 'img/Jessica.png',
-            texto: 'Sem palavras para a experiência de trabalhar com a Lúmen. Uma equipe incrível, atentas aos detalhes, muito criativas e que atendeu minhas expectativas. Indico de olhos fechados.'
+            nome: 'Naturalle',
+            foto: 'img/cliente1.jpeg',
+            texto: 'A We Lumen transformou nossa presença online, superando nossas expectativas! A equipe foi super atenciosa e criativa em todos os processos!'
         },
         cliente2: {
-            nome: 'Beatriz - BKS Personalizados',
-            foto: 'img/Beatri.png',
-            texto: 'Gente do céu, vocês arrasam de mais, amo o trabalho de vocês. Não canso de indicar o trabalho de vocês.'
+            nome: 'Bella Modas',
+            foto: 'img/cliente1.jpeg',
+            texto: 'Trabalhar com a We Lumen foi uma experiência incrível. Eles ajudaram a transformar nossa visão em realidade com soluções criativas e rápidas.'
         },
         cliente3: {
-            nome: 'Fanny - Bella Modas',
-            foto: 'img/Bella Modas.png',
-            texto: 'Quero agradecer pelo excelente trabalho na gestão das redes sociais. A dedicação e criatividade de vocês têm feito toda a diferença. Estou muito satisfeita com os resultados e animada para continuar essa parceria!'
+            nome: 'Evelyn',
+            foto: 'img/cliente1.jpeg',
+            texto: 'A We Lumen fez um trabalho maravilhoso para a nossa marca. Agora temos uma presença online forte e engajante, e os resultados falam por si mesmos!'
         }
     };
 
