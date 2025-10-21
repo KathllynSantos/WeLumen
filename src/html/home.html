@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/responsividade.css">
+    <title>Lumen - Agência Digital</title>
+    <script src="/src/js/carrossel.js" defer></script>    
+    <script src="/src/js/transicao.js" defer></script>
+    <script src="/src/js/depoimento.js" defer></script>   
+    <script src="/src/js/menu.js" defer></script> 
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/src/img/Logo1.png" alt="Lumen Logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#agencia">Agência</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+
+    </nav>
+
+    <section id="home" class="carousel-container">
+        <div class="carousel">
+            <div class="slide active">
+                <img src="/src/img/banner1.png" alt="Banner 1">
+                <div class="overlay-text">
+                    <h2>Transformando ideias em <span style="color: #C08A06;">experiências digitais</span> incríveis</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/src/img/banner1.png" alt="Banner 2">
+                <div class="overlay-text">
+                    <h2>Conectamos marcas a <span style="color: #C08A06;">soluções criativas</span> e inovadoras</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/src/img/banner1.png" alt="Banner 3">
+                <div class="overlay-text" >
+                    <h2>Sua presença online com <span style="color: #C08A06;">impacto real</span> e resultados visíveis</h2>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+            <div class="letreiro-container">
+                <div class="letreiro">
+                    <span>Gestão de Redes</span>
+                    <span>Desenvolvimento Web</span>
+                    <span>Design Gráfico</span>
+                    <span>Branding</span>
+                    <span>Gestão de Redes</span>  <!-- Repetição para continuidade perfeita -->
+                    <span>Desenvolvimento Web</span>
+                    <span>Design Gráfico</span>
+                    <span>Branding</span>
+                </div>
+            </div>
+        
+    
+    <section id="sobre-nos" class="sobre-nos">
+        <div class="sobre-texto">
+            <h1>Quem somos</h1>
+            <p>
+                Somos a We Lumen, uma agência especializada em Desenvolvimento Web, Branding, Marketing Digital, Social Media e Design.
+            </p>
+            <p>
+                Nossa missão é transformar negócios por meio de estratégias inovadoras, tecnologia de ponta e criatividade, impulsionando marcas para o sucesso no ambiente digital.
+            </p>
+            <p>
+                Com atuação nacional e soluções personalizadas, ajudamos empresas a conquistar presença online, aumentar engajamento e gerar conversões reais.
+            </p>
+            <p>
+                Nossa equipe altamente qualificada trabalha com gestão de redes sociais, criação de sites responsivos, identidade visual impactante e campanhas digitais estratégicas.
+            </p>
+            <p>
+                Se você busca uma agência que une inovação, performance e experiência, a We Lumen está pronta para ser sua parceira nessa jornada.
+            </p>
+            <p>
+                Entre em contato e descubra como podemos transformar sua marca!
+            </p>  
+            <a href="#saiba-mais" class="saiba-mais-btn">Saiba Mais <span class="seta">&#8594;</span></a>    
+        </div>
+        <div class="sobre-imagem">
+            <img src="/src/img/nos-2.png" alt="Equipe da We Lumen trabalhando">
+        </div>
+    </section>
+    <section class="letreiro-case">
+        <div class="texto-background">WE LUMEN</div>
+        <div class="conteudo">
+            <h2>Conheça todos os nossos cases</h2>
+            <a href="#" class="saiba-mais-btn">
+                Acessar
+                <span class="seta">&#8594;</span>
+            </a>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="portfolio">
+        <h2>Nossas soluções em Marketing Digital e Tecnologia</h2>
+        <p>Soluções estratégicas em tecnologia, branding e Marketing Digital, <br>para iluminar e impulsionar sua marca no digital.</p>
+        
+        <div class="portfolio-grid">
+            <a href="#" class="portfolio-item"><img src="/src/img/portfolio1.png" alt="Trabalho 1"></a>
+            <a href="#" class="portfolio-item"><img src="/src/img/portfolio2.png" alt="Trabalho 2"></a>
+            <a href="#" class="portfolio-item"><img src="/src/img/portfolio3.png" alt="Trabalho 3"></a>
+            <a href="#" class="portfolio-item"><img src="/src/img/portfolio4.png" alt="Trabalho 4"></a>
+            <a href="#" class="portfolio-item"><img src="/src/img/portfolio5.png" alt="Trabalho 5"></a>
+            <a href="#" class="portfolio-item"><img src="/src/img/portfolio6.png" alt="Trabalho 6"></a>
+        </div>
+    
+        <!-- Texto finalizando a seção -->
+        <p class="portfolio-finalizacao">Conheça mais de cada solução de Marketing</p>
+        
+        <!-- Botão de "Saiba Mais" -->
+        <a href="#" class="saiba-mais-btn">
+            Saiba Mais
+            <span class="seta">&#8594;</span>
+        </a>
+    </section>
+            
+        <section class="depoimentos" >
+            <h2>Depoimentos</h2>
+            <div class="depoimentos-container">
+                <!-- Lista de clientes -->
+                <div class="clientes-lista">
+                    <div class="cliente selecionado" onclick="mostrarDepoimento('cliente1')">
+                        <img src="img/cliente1.jpeg" alt="Cliente 1" class="foto-cliente">
+                        <p class="nome-cliente">Naturalle</p>
+                    </div>
+                    <div class="cliente" onclick="mostrarDepoimento('cliente2')">
+                        <img src="img/cliente1.jpeg" alt="Cliente 2" class="foto-cliente">
+                        <p class="nome-cliente">Bella Modas</p>
+                    </div>
+                    <div class="cliente" onclick="mostrarDepoimento('cliente3')">
+                        <img src="img/cliente1.jpeg" alt="Cliente 3" class="foto-cliente">
+                        <p class="nome-cliente">Evelyn</p>
+                    </div>
+                </div>
+        
+                <!-- Depoimento -->
+                <div class="depoimento-box">
+                    <div class="info-cliente">
+                        <img src="img/cliente1.jpg" alt="Foto Cliente 1" class="foto-cliente-box">
+                        <h3 class="nome-cliente-box">Naturalle</h3>
+                    </div>
+                    <h4 class="titulo-depoimento">O que ele diz:</h4>
+                    <p class="texto-depoimento">"A We Lumen transformou nossa presença online, superando nossas expectativas! A equipe foi super atenciosa e criativa em todos os processos!"</p>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="contato">
+            <div class="contato-texto">
+                <h2>Vamos Iniciar o seu projeto!</h2>
+            </div>
+            <a href="#formulario" class="contato-btn">
+                <img src="img/botao_contato.png" alt="Iniciar Projeto">
+            </a>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Primeira coluna (contato com ícones) -->
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="#"><img src="img/whats.png" alt="WhatsApp"> WhatsApp</a></li>
+                        <li><a href="#"><img src="img/tele.png" alt="Telefone"> Telefone</a></li>
+                        <li><a href="#"><img src="img/email.png" alt="Email"> Email</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Segunda coluna (links de navegação) -->
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Agência</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Terceira coluna (logo e links para redes sociais) -->
+                <div class="footer-col">
+                    <img src="img/logof.png" alt="Logo da Lumen" class="footer-logo">
+                    <div class="social-links">
+                        <a href="#"><img src="img/insta.png" alt="Instagram"></a>
+                        <a href="#"><img src="img/linkd.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="img/be.png" alt="BE"></a>
+                        <a href="#"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+</body>
+</html>
