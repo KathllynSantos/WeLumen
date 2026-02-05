@@ -147,7 +147,7 @@ body {
 .banner-1 .image-area-left {
     flex: 1; /* 60% da largura para a imagem */
     background-color: #bebebe; /* Cor placeholder da imagem */
-    background: url('/src/img/web.png') no-repeat; /* Removi center center / cover */
+    background: url('/src/img/web1.png') no-repeat; /* Removi center center / cover */
     
     /* ************************************************************* */
     /* A CHAVE PARA NÃO CORTAR AS CABEÇAS: PRIORIZA O TOPO DA IMAGEM */
