@@ -53,6 +53,21 @@
   }
 }
 
+/* Celular: a barra ANTERIOR / PRÓXIMO ficava presa à direita, fora do centro
+   do botão amarelo, e cobria os pontinhos. Agora os pontinhos ficam em cima
+   e a barra logo abaixo, os dois centralizados. */
+@media (max-width: 768px) {
+  .carousel-ui {
+    flex-direction: column;
+    gap: 14px;
+    bottom: 28px;
+  }
+
+  .carousel-nav {
+    position: static;
+  }
+}
+
 /* Equipe com 3 pessoas: grupo centralizado no desktop */
 @media (min-width: 1025px) {
   .team-grid {
@@ -221,3 +236,124 @@
     transition: none;
   }
 }
+
+/* ---------- Credibilidade: depoimentos, contato, portfólio ---------- */
+.testimonial-user .testimonial-service {
+  display: block;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.testimonial-user .testimonial-handle {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--gold);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.testimonial-user .testimonial-handle:hover,
+.testimonial-user .testimonial-handle:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.cta-email {
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--light);
+  position: relative;
+  z-index: 2;
+}
+
+.cta-email a,
+.footer-contact a {
+  color: var(--gold);
+  text-decoration: none;
+  user-select: text;
+}
+
+.cta-email a:hover,
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  list-style: none;
+  margin: 18px 0 14px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--gray);
+}
+
+.footer-contact i {
+  width: 18px;
+  color: var(--gold);
+}
+
+.footer-legal {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.footer-legal a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--gold);
+}
+
+.portfolio-more {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.portfolio-more a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.portfolio-more a:hover {
+  text-decoration: underline;
+}
+
+/* Página de privacidade */
+.legal-page {
+  background: var(--dark);
+  color: var(--light);
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.legal-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.legal-wrap h1 { font-size: 30px; margin: 24px 0 8px; }
+.legal-wrap h2 { font-size: 18px; color: var(--gold); margin: 34px 0 8px; }
+.legal-wrap p, .legal-wrap li { color: #cfcfcf; }
+.legal-wrap ul { padding-left: 20px; }
+.legal-wrap a { color: var(--gold); }
+.legal-wrap .back { text-decoration: none; font-size: 13px; letter-spacing: 1px; }
+
+.footer-contact a { text-transform: none; letter-spacing: 0; font-size: 13px; }
+.footer-contact li { text-transform: none; }
+.footer-bottom { padding-right: 70px; }
+
+.testimonial-user strong { display: block; }
+.testimonial-user .testimonial-handle { display: block; margin-top: 4px; }
+
+.footer-column li small { display: block; font-size: 11px; opacity: .65; margin-top: 1px; margin-bottom: 6px; }
+.footer-column .footer-contact,
+.footer-column .footer-contact li,
+.footer-column .footer-contact a { text-transform: none !important; letter-spacing: 0 !important; }
