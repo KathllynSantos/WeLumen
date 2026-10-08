@@ -142,6 +142,21 @@ const prevTestimonial = document.querySelector('.testimonials-nav .prev');
 let testimonialIndex = 0;
 let testimonialInterval;
 
+// Quantos depoimentos aparecem por vez (2 no desktop, 1 no celular)
+// e qual é o último índice alcançável, para nenhum card ficar fora do slider.
+function lastTestimonialIndex(){
+  const slider = document.querySelector('.testimonials-slider');
+  if (!slider || !testimonialCards.length) return 0;
+
+  const visible = Math.max(1, Math.round(slider.offsetWidth / (testimonialCards[0].offsetWidth + 30)));
+  return Math.max(0, testimonialCards.length - visible);
+}
+
+window.addEventListener('resize', () => {
+  testimonialIndex = Math.min(testimonialIndex, lastTestimonialIndex());
+  updateTestimonialSlide();
+});
+
 function updateTestimonialSlide(){
   if (!testimonialCards.length) return;
 
@@ -152,7 +167,7 @@ function updateTestimonialSlide(){
 
 function startTestimonialInterval(){
   testimonialInterval = setInterval(() => {
-    if (testimonialIndex < testimonialCards.length - 2) {
+    if (testimonialIndex < lastTestimonialIndex()) {
       testimonialIndex++;
     } else {
       testimonialIndex = 0;
@@ -168,7 +183,7 @@ function resetTestimonialInterval(){
 
 if (nextTestimonial && prevTestimonial) {
   nextTestimonial.onclick = () => {
-    if (testimonialIndex < testimonialCards.length - 2) {
+    if (testimonialIndex < lastTestimonialIndex()) {
       testimonialIndex++;
     } else {
       testimonialIndex = 0;
@@ -181,7 +196,7 @@ if (nextTestimonial && prevTestimonial) {
     if (testimonialIndex > 0) {
       testimonialIndex--;
     } else {
-      testimonialIndex = testimonialCards.length - 2;
+      testimonialIndex = lastTestimonialIndex();
     }
     updateTestimonialSlide();
     resetTestimonialInterval();
