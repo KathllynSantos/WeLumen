@@ -1,0 +1,359 @@
+/* ==========================================================
+   We Lúmen - ajustes e seção "Como trabalhamos"
+   Carregue DEPOIS de style.css (usa as variáveis dele:
+   --dark, --gold, --gray, --light e os --space-*).
+   ========================================================== */
+
+/* ---------- Pequenos ajustes ---------- */
+
+/* Seta dos serviços agora é link */
+.service-item a.arrow {
+  color: var(--gray);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.service-item:hover a.arrow {
+  color: var(--gold);
+  transform: translateX(6px);
+}
+
+/* Logo do header virou link */
+.logo a {
+  display: inline-block;
+  line-height: 0;
+}
+
+/* Foco visível para quem navega por teclado */
+.carousel-dots .dot:focus-visible,
+.carousel-nav button:focus-visible,
+.testimonials-nav button:focus-visible,
+.service-item a.arrow:focus-visible,
+.logo a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Celular: o menu lateral fica fora da tela, mas a sombra dele vazava
+   como uma faixa escura na borda direita. Agora só aparece com o menu aberto. */
+@media (max-width: 768px) {
+  .site-nav {
+    box-shadow: none;
+  }
+
+  .nav-open .site-nav {
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Com o menu aberto, o botão (vira "X") ficava escondido atrás do painel */
+  .nav-toggle {
+    position: relative;
+    z-index: 21;
+  }
+}
+
+/* Celular: a barra ANTERIOR / PRÓXIMO ficava presa à direita, fora do centro
+   do botão amarelo, e cobria os pontinhos. Agora os pontinhos ficam em cima
+   e a barra logo abaixo, os dois centralizados. */
+@media (max-width: 768px) {
+  .carousel-ui {
+    flex-direction: column;
+    gap: 14px;
+    bottom: 28px;
+  }
+
+  .carousel-nav {
+    position: static;
+  }
+}
+
+/* Equipe com 3 pessoas: grupo centralizado no desktop */
+@media (min-width: 1025px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------- Como trabalhamos ---------- */
+
+.process {
+  background: var(--dark);
+  color: var(--light);
+  padding: var(--space-xl) 70px;
+  position: relative;
+}
+
+/* Brilho dourado discreto, no mesmo espírito do hero */
+.process::before {
+  content: "";
+  position: absolute;
+  top: -160px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  background: rgba(233, 169, 27, 0.1);
+  border-radius: 40px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.process-header {
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto var(--space-lg);
+  text-align: center;
+}
+
+.process-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.process-line {
+  display: block;
+  width: 42px;
+  height: 2px;
+  background: var(--gold);
+  margin: 12px auto 20px;
+}
+
+.process-header h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 12px 0 18px;
+}
+
+.process-header p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--gray);
+}
+
+.process-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  list-style: none;
+}
+
+.process-step {
+  padding: 40px 26px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.4s;
+}
+
+.process-step:last-child {
+  border-right: none;
+}
+
+.process-number {
+  display: block;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.process-step h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  transition: 0.4s;
+}
+
+.process-step p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--gray);
+  transition: 0.4s;
+}
+
+.process-step:hover h3 {
+  color: var(--gold);
+}
+
+.process-step:hover p {
+  color: var(--light);
+}
+
+@media (max-width: 1024px) {
+  .process {
+    padding: var(--space-xl) 40px;
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-step:nth-child(2) {
+    border-right: none;
+  }
+
+  .process-step:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 576px) {
+  .process {
+    padding: 80px 30px;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 32px 4px;
+  }
+
+  .process-step:nth-child(n + 3) {
+    border-top: none;
+  }
+
+  .process-step:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-step,
+  .process-step h3,
+  .process-step p,
+  .service-item a.arrow {
+    transition: none;
+  }
+}
+
+/* ---------- Credibilidade: depoimentos, contato, portfólio ---------- */
+.testimonial-user .testimonial-service {
+  display: block;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.testimonial-user .testimonial-handle {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--gold);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.testimonial-user .testimonial-handle:hover,
+.testimonial-user .testimonial-handle:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.cta-email {
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--light);
+  position: relative;
+  z-index: 2;
+}
+
+.cta-email a,
+.footer-contact a {
+  color: var(--gold);
+  text-decoration: none;
+  user-select: text;
+}
+
+.cta-email a:hover,
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  list-style: none;
+  margin: 18px 0 14px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--gray);
+}
+
+.footer-contact i {
+  width: 18px;
+  color: var(--gold);
+}
+
+.footer-legal {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.footer-legal a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--gold);
+}
+
+.portfolio-more {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.portfolio-more a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.portfolio-more a:hover {
+  text-decoration: underline;
+}
+
+/* Página de privacidade */
+.legal-page {
+  background: var(--dark);
+  color: var(--light);
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.legal-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.legal-wrap h1 { font-size: 30px; margin: 24px 0 8px; }
+.legal-wrap h2 { font-size: 18px; color: var(--gold); margin: 34px 0 8px; }
+.legal-wrap p, .legal-wrap li { color: #cfcfcf; }
+.legal-wrap ul { padding-left: 20px; }
+.legal-wrap a { color: var(--gold); }
+.legal-wrap .back { text-decoration: none; font-size: 13px; letter-spacing: 1px; }
+
+.footer-contact a { text-transform: none; letter-spacing: 0; font-size: 13px; }
+.footer-contact li { text-transform: none; }
+.footer-bottom { padding-right: 70px; }
+
+.testimonial-user strong { display: block; }
+.testimonial-user .testimonial-handle { display: block; margin-top: 4px; }
+
+.footer-column li small { display: block; font-size: 11px; opacity: .65; margin-top: 1px; margin-bottom: 6px; }
+.footer-column .footer-contact,
+.footer-column .footer-contact li,
+.footer-column .footer-contact a { text-transform: none !important; letter-spacing: 0 !important; }

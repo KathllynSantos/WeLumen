@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Lúmen | Links</title>
+    <meta
+      name="description"
+      content="We Lúmen, empresa de transformação digital. Sites, identidade visual, redes sociais, vídeo e álbuns. Escolha um serviço e peça seu orçamento."
+    />
+    <meta name="author" content="We Lúmen" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#020e14" />
+    <link rel="canonical" href="https://welumen.com.br/bio.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="We Lúmen" />
+    <meta property="og:title" content="We Lúmen | Transformamos ideias em soluções digitais" />
+    <meta
+      property="og:description"
+      content="Escolha um serviço e peça seu orçamento: sites, identidade visual, redes sociais, vídeo e álbuns."
+    />
+    <meta property="og:url" content="https://welumen.com.br/bio.html" />
+    <meta property="og:image" content="https://welumen.com.br/src/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://welumen.com.br/src/img/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+
+    <style>
+      :root {
+        --dark: #020e14;
+        --gold: #e9a91b;
+        --gray: #8d8c8c;
+        --light: #f8f8f8;
+        --line: rgba(255, 255, 255, 0.1);
+        --surface: rgba(255, 255, 255, 0.035);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      html {
+        background: var(--dark);
+      }
+
+      body {
+        min-height: 100vh;
+        background: var(--dark);
+        color: var(--light);
+        overflow-x: hidden;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Grade e formas, o mesmo clima do topo do site */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .shape {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background: rgba(233, 169, 27, 0.2);
+        border-radius: 25px;
+        transform: rotate(45deg);
+        pointer-events: none;
+        z-index: 0;
+        animation: float 9s ease-in-out infinite;
+      }
+
+      .shape.one {
+        top: -160px;
+        right: -150px;
+      }
+
+      .shape.two {
+        top: -210px;
+        right: -10px;
+        animation-delay: 1.2s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(45deg);
+        }
+        50% {
+          transform: translate(-12px, 12px) rotate(45deg);
+        }
+      }
+
+      .bio {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 56px 24px 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      /* Marca */
+      .brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .brand img {
+        width: 230px;
+        max-width: 70%;
+        height: auto;
+        display: block;
+      }
+
+      .brand .kicker {
+        margin-top: 6px;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+
+      .brand .rule {
+        display: block;
+        width: 42px;
+        height: 2px;
+        background: var(--gold);
+        margin: 22px 0 18px;
+      }
+
+      .brand p {
+        max-width: 340px;
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--light);
+        opacity: 0.85;
+      }
+
+      /* Redes */
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .socials a {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+      }
+
+      .socials a:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--dark);
+        transform: translateY(-3px);
+      }
+
+      .socials svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Botão principal */
+      .cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 17px 24px;
+        background: var(--gold);
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+
+      .cta:hover {
+        opacity: 0.85;
+        transform: translateY(-2px);
+      }
+
+      .cta svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Serviços */
+      .services-head {
+        margin-bottom: 18px;
+      }
+
+      .services-head span {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+
+      .services-head i {
+        display: block;
+        width: 42px;
+        height: 2px;
+        background: var(--gold);
+        margin-top: 12px;
+      }
+
+      .services {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: none;
+      }
+
+      .service {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 18px 20px;
+        min-height: 84px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--surface);
+        color: var(--light);
+        text-decoration: none;
+        transition: 0.35s;
+      }
+
+      .service .icon {
+        flex: 0 0 52px;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(233, 169, 27, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.35s;
+      }
+
+      .service .icon svg {
+        width: 28px;
+        height: 28px;
+        color: var(--gold);
+        transition: 0.35s;
+      }
+
+      .service .text {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .service h2 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 5px;
+        transition: 0.35s;
+      }
+
+      .service p {
+        font-size: 12px;
+        line-height: 1.6;
+        color: var(--gray);
+        transition: 0.35s;
+      }
+
+      .service .arrow {
+        flex: 0 0 20px;
+        width: 20px;
+        height: 20px;
+        color: var(--gray);
+        transition: 0.35s;
+      }
+
+      .service:hover {
+        border-color: rgba(233, 169, 27, 0.55);
+        background: rgba(233, 169, 27, 0.06);
+        transform: translateY(-2px);
+      }
+
+      .service:hover h2 {
+        color: var(--gold);
+      }
+
+      .service:hover p {
+        color: var(--light);
+      }
+
+      .service:hover .icon {
+        background: var(--gold);
+      }
+
+      .service:hover .icon svg {
+        color: var(--dark);
+      }
+
+      .service:hover .arrow {
+        color: var(--gold);
+        transform: translateX(5px);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      /* Rodapé */
+      footer {
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        text-align: center;
+      }
+
+      footer a {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--light);
+        text-decoration: none;
+        border-bottom: 1px solid var(--gold);
+        padding-bottom: 3px;
+      }
+
+      footer a:hover {
+        color: var(--gold);
+      }
+
+      footer p {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: var(--gray);
+      }
+
+      @media (max-width: 380px) {
+        .bio {
+          padding: 44px 18px 30px;
+        }
+
+        .service {
+          padding: 16px;
+          gap: 14px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .shape {
+          animation: none;
+        }
+
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+
+    <main class="bio">
+      <!-- MARCA -->
+      <header class="brand">
+        <img src="src/img/logo-lumen.png" alt="We Lúmen" width="230" height="130" />
+        <span class="kicker">Empresa de transformação digital</span>
+        <span class="rule"></span>
+        <p>Transformamos ideias em soluções digitais inovadoras.</p>
+      </header>
+
+      <!-- REDES -->
+      <nav class="socials" aria-label="Redes e site da We Lúmen">
+        <a href="https://welumen.com.br" target="_blank" rel="noopener noreferrer" aria-label="Site da We Lúmen" title="Site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+        </a>
+        <a href="https://www.instagram.com/welumenoficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da We Lúmen" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://br.pinterest.com/WeLumen" target="_blank" rel="noopener noreferrer" aria-label="Pinterest da We Lúmen" title="Pinterest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.2 18.2 12 10.6"/><path d="M9.6 12.8C8.6 11 9.4 8.6 11.8 8.2c2.4-.3 3.8 1.7 3.2 3.6-.5 1.6-2.2 2.3-3.3 1.5"/></svg>
+        </a>
+        <a href="https://open.spotify.com/playlist/7KPibIRLEZKwSJ2mP9HQgO?si=IMlmWDRjTcCiTUrtBRunVg" target="_blank" rel="noopener noreferrer" aria-label="Playlist da We Lúmen no Spotify" title="Playlist no Spotify">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7 9.5c3.5-1.2 7-1 10 .8"/><path d="M7.6 12.6c3-.9 6-.6 8.6 1"/><path d="M8.2 15.5c2.4-.6 4.7-.3 6.6.8"/></svg>
+        </a>
+      </nav>
+
+      <!-- WHATSAPP -->
+      <a class="cta" href="https://wa.link/iasqom" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-.9.8c-1-.4-1.9-1.3-2.3-2.3l.8-.9-1-2z"/></svg>
+        Falar no WhatsApp
+      </a>
+
+      <!-- SERVIÇOS -->
+      <section aria-labelledby="servicos-titulo">
+        <div class="services-head">
+          <span id="servicos-titulo">nossos serviços</span>
+          <i></i>
+        </div>
+
+        <ul class="services">
+          <li>
+            <a class="service" href="https://docs.google.com/forms/d/e/1FAIpQLSflxOG0__5TeKXAPapafh3-52O6B61KY8TeKAVIfGwq-24dYg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="32" height="22" rx="3"/><path d="M14 40h12M20 30v10"/><rect x="33" y="19" width="11" height="20" rx="2.5"/></svg>
+              </span>
+              <div class="text">
+                <h2>Web Lúmen</h2>
+                <p>Desenvolvimento web e e‑commerce</p>
+              </div>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="service" href="https://docs.google.com/forms/d/e/1FAIpQLSegfmy-1GQW-H9vCbnJ9Q36NiTkEjL77zn5i7lXcfmS0aiazQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="1.6" fill="currentColor"/></svg>
+              </span>
+              <div class="text">
+                <h2>Identity Lúmen</h2>
+                <p>Logotipo, identidade visual e manual de marca</p>
+              </div>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="service" href="https://docs.google.com/forms/d/e/1FAIpQLScSYGOe9htymeOSQuT-CnCCNZYmkIO18RN4xsnHP2AMOBoCKA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 38V27M24 38V12M37 38V21" stroke-width="5.5"/></svg>
+              </span>
+              <div class="text">
+                <h2>Social Lúmen</h2>
+                <p>Gestão de redes sociais, conteúdo e direção visual de perfis</p>
+              </div>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="service" href="https://docs.google.com/forms/d/e/1FAIpQLSfVVPdWi2m6fYcns4zBIWkQN32r6m5RtApvDJ-pGIIn6GP6Ug/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="38" height="28" rx="4"/><path d="M20 18l10 6-10 6z" fill="currentColor"/></svg>
+              </span>
+              <div class="text">
+                <h2>Motion Lúmen</h2>
+                <p>Edição de vídeos, reels, vídeos institucionais e criativos</p>
+              </div>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="service" href="https://docs.google.com/forms/d/e/1FAIpQLSdE0XGTsSlive3QHSLNgxnpw-ccRKfFzdtIm3gi4giOanYooQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="M8 33l10-10 8 8 6-5 8 8"/><circle cx="32" cy="17" r="2.5" fill="currentColor"/></svg>
+              </span>
+              <div class="text">
+                <h2>Álbum Lúmen</h2>
+                <p>Diagramação de álbuns fotográficos, comemorativos e profissionais</p>
+              </div>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <a href="https://welumen.com.br" target="_blank" rel="noopener noreferrer">welumen.com.br</a>
+        <p>© 2026 We Lúmen. Todos os direitos reservados.</p>
+      </footer>
+    </main>
+  </body>
+</html>
